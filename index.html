@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Filter Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h3>Presets</h3>
+            <select id="presetSelect">
+                <option value="">Select a preset...</option>
+                <option value="profanity">Profanity Filter</option>
+                <option value="positive">Positive Words Only</option>
+                <option value="email">Email Blocker</option>
+                <option value="url">URL Highlighter</option>
+                <option value="numbers">Number Extractor</option>
+            </select>
+            
+            <h3>Filters</h3>
+            <label for="allow">Allow List (comma separated words)</label>
+            <textarea id="allow" placeholder="word1, word2, word3"></textarea>
+            
+            <label for="block">Block List (comma separated words)</label>
+            <textarea id="block" placeholder="badword1, badword2"></textarea>
+            
+            <label for="regex">Regex Filters (one per line, e.g. /\btest\b/gi)</label>
+            <textarea id="regex" placeholder="/\bexample\b/gi"></textarea>
+        </div>
+        <div class="right">
+            <h3>Text Processing</h3>
+            <label for="input">Input Text</label>
+            <textarea id="input" placeholder="Enter your text here..."></textarea>
+            
+            <label for="output">Filtered Output</label>
+            <div id="output"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
